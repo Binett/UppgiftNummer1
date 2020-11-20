@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UppgiftNummer1
 {
@@ -8,8 +9,10 @@ namespace UppgiftNummer1
         {
             //Change title to "Inlämningsuppgift 1"
             Console.Title = "Inlämningsuppgift1";
+            //Add a list for results
+            List<double> myList = new List<double>();
 
-            double res;
+            double res=0;
 
             Console.Write(">Enter first operator: ");//Ask for operators!            
             char ops1 = Console.ReadKey().KeyChar;//input from the user
@@ -116,8 +119,11 @@ namespace UppgiftNummer1
                 {
                     res = firstTerm / secondTerm / thirdTerm;
                     Console.WriteLine($">{firstTerm} {ops1} {secondTerm} {ops2} {thirdTerm} = {res}");
-                }
+                }               
             }
+            myList.Add(res);
+         
+
             Console.ReadLine();
         }
     }
