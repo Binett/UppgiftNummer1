@@ -122,9 +122,22 @@ namespace UppgiftNummer1
                 }               
             }
             myList.Add(res);
-         
 
-            Console.ReadLine();
+            //Display the outcome of the result
+            if (res<100)
+            {
+                Console.WriteLine(">Less then a hundred");
+            }
+            else if(res > 100)
+            {
+                Console.WriteLine(">More the a hundred");
+            }
+            else if (res==100)
+            {
+                Console.WriteLine(">Cool, now you have a hundred, clap clap");
+            }
+
+            
         }
     }
 }
