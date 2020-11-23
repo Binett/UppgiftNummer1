@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace UppgiftNummer1
 {
@@ -141,11 +142,13 @@ namespace UppgiftNummer1
                     Console.WriteLine(">Cool, now you have a hundred, clap clap");
                 }
                 
-                Console.WriteLine(">Another try?");
+                Console.WriteLine(">Another try? [y|Y]");
                 char goAgain = Console.ReadKey().KeyChar;
                 Console.WriteLine();
                 if (goAgain == 'y' || goAgain == 'Y')
                 {
+                    Thread.Sleep(1000);
+                    Console.Clear();
                     continue;
                 }
                 else
