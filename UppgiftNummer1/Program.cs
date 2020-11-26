@@ -34,18 +34,13 @@ namespace UppgiftNummer1
                 double res = Calculate(firstTerm, ops1, secondTerm, ops2, thirdTerm);
                 myList.Add(res);
 
-                if (res < 100)
-                {
-                    Console.WriteLine(">Less then a hundred");
-                }
-                else if (res > 100)
-                {
-                    Console.WriteLine(">More the a hundred");
-                }
-                else if (res == 100)
-                {
+                if (res < 100)                
+                    Console.WriteLine(">Less then a hundred");                
+                else if (res > 100)                
+                    Console.WriteLine(">More the a hundred");                
+                else if (res == 100)                
                     Console.WriteLine(">Cool, now you have a hundred, clap clap");
-                }
+                
                 Console.WriteLine(">Another try? Y/N");
                 char goAgain = Console.ReadKey().KeyChar;
                 Console.WriteLine();
@@ -170,6 +165,7 @@ namespace UppgiftNummer1
             }
             else
             {
+                Console.WriteLine(">Wrong input! please try again with a number");                
                 return AskNum();
             }
         }
